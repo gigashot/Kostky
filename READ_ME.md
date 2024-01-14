@@ -20,7 +20,7 @@ Po stisknutí klávesy Enter jsou hodeny šest kostek.
 Program automaticky rozpoznává speciální kombinace a přiděluje jim odpovídající body.
 Skóre za každé kolo je zobrazeno a přidáno k celkovému skóre.
 Uživatel je vyzván k zadání, zda chce hrát další kolo.
-## Rozpoznávané Kombinace
+## Rozpoznávané Kombinace / Body
 Program rozpoznává následující kombinace a přiděluje jim odpovídající body:
 
 |           | Hodnota           |   Počet bodů   |           |
@@ -37,6 +37,15 @@ Program rozpoznává následující kombinace a přiděluje jim odpovídající 
 |           |       6x jednička   |   8000 bodů    |           |
 |           |       3x dvojice    |   1000 bodů    |           |
 |           |Postupka (1, 2, 3, 4, 5, 6)|   1500 bodů    |           |
+´´´bash
+        # vypočítávání skóre pro současný hod
+        round_score = calculate_score(dice)
+        print("Score for this round: {}".format(round_score))
+
+        # přidá skóre do celkového skóre
+        total_score += round_score
+        print("Total score: {}\n".format(total_score))
+´´´ 
 
 ## Ukázka použití
 ```bash
