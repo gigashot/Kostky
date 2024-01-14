@@ -10,7 +10,7 @@ def main_fce():
         # hledá všechny speciální kombinace
         if all(x == 1 for x in dice):
             score += 1000 if len(dice) == 3 else 2000 if len(dice) == 4 else 4000 if len(dice) == 5 else 8000
-        elif all(x == dice[0] for x in dice):
+        if all(x == dice[0] for x in dice):
             if dice[0] == 1:
                 score += 1000 if len(dice) == 3 else 2000 if len(dice) == 4 else 4000 if len(dice) == 5 else 8000
             else:
@@ -69,7 +69,7 @@ def main_fce():
         total_score += round_score
         print("Total score: {}\n".format(total_score))
 
-        # zeptá se uživatele jestli chce zpustit další kolo
+        # zeptá se uživatele jestli chce zpustit další
         play_again = input("Do you want to play another round? (yes/no): ").lower()
         if play_again != 'yes':
             print("Game over! Final score: {}".format(total_score))

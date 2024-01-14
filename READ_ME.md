@@ -29,9 +29,8 @@ Program rozpoznává následující speciální kombinace a přiděluje jim odpo
 3x dvojice: 1000 bodů
 Postupka (1, 2, 3, 4, 5, 6): 1500 bodů
 A další...
-Ukázka použití
-```bash
-Copy code
+### Ukázka použití
+
 Press Enter to roll the dice...
 Dice: [3, 3, 1, 6, 2, 5]
 Score for this round: 50
@@ -45,4 +44,3 @@ Total score: 650
 
 Do you want to play another round? (yes/no): no
 Game over! Final score: 650
-bash
