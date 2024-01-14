@@ -12,7 +12,7 @@ Program vyžaduje nainstalovaný Python (verze 3.x).
 
 Stačí spustit skript v Pythonu. Příkaz k spuštění může být:
 
-```bash
+
 python nazev_skriptu.py
 Pravidla hry
 Po stisknutí klávesy Enter jsou hodeny šest kostek.
@@ -30,7 +30,7 @@ Program rozpoznává následující speciální kombinace a přiděluje jim odpo
 Postupka (1, 2, 3, 4, 5, 6): 1500 bodů
 A další...
 Ukázka použití
-bash
+```bash
 Copy code
 Press Enter to roll the dice...
 Dice: [3, 3, 1, 6, 2, 5]
@@ -45,4 +45,4 @@ Total score: 650
 
 Do you want to play another round? (yes/no): no
 Game over! Final score: 650
-aa
+bash
