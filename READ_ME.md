@@ -29,6 +29,12 @@ Program rozpoznává následující speciální kombinace a přiděluje jim odpo
 6x jednička: 8000 bodů
 3x dvojice: 1000 bodů
 Postupka (1, 2, 3, 4, 5, 6): 1500 bodů
+| Jméno    | Počet bodů 
+|:---------:|:---------:|
+| Jan       | Novák     |
+| Marie     | Smetana   |
+| Petr      | Vondráček |
+
 A další...
 ## Ukázka použití
 Press Enter to roll the dice...
