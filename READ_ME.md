@@ -39,9 +39,9 @@ Program rozpoznává následující kombinace a přiděluje jim odpovídající 
 |           |Postupka (1, 2, 3, 4, 5, 6)|   1500 bodů    |           |
 
 
-### Výpočet skóre pro současný hod
 
 ```python
+#Výpočet skóre pro současný hod
 round_score = calculate_score(dice)
 print("Score for this round: {}".format(round_score))
 
