@@ -37,6 +37,7 @@ Program rozpoznává následující kombinace a přiděluje jim odpovídající 
 |           |       6x jednička   |   8000 bodů    |           |
 |           |       3x dvojice    |   1000 bodů    |           |
 |           |Postupka (1, 2, 3, 4, 5, 6)|   1500 bodů    |           |
+
 ´´´bash
         # vypočítávání skóre pro současný hod
         round_score = calculate_score(dice)
@@ -45,7 +46,7 @@ Program rozpoznává následující kombinace a přiděluje jim odpovídající 
         # přidá skóre do celkového skóre
         total_score += round_score
         print("Total score: {}\n".format(total_score))
-´´´ 
+        ´´´ 
 
 ## Ukázka použití
 ```bash
