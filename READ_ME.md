@@ -48,7 +48,7 @@ print("Score for this round: {}".format(round_score))
 # Přidání skóre do celkového skóre
 total_score += round_score
 print("Total score: {}\n".format(total_score))
-
+```
 
 
 ## Ukázka použití
