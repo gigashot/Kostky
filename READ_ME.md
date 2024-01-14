@@ -39,20 +39,19 @@ Program rozpoznává následující kombinace a přiděluje jim odpovídající 
 |           |Postupka (1, 2, 3, 4, 5, 6)|   1500 bodů    |           |
 
 
-# vypočítávání skóre pro současný hod
-´´´bash
+#Výpočet skóre pro současný hod
+
+```python
 round_score = calculate_score(dice)
 print("Score for this round: {}".format(round_score))
-´´´
 
-# přidá skóre do celkového skóre
-´´´bash
+# Přidání skóre do celkového skóre
 total_score += round_score
 print("Total score: {}\n".format(total_score))
-´´´ 
+
+
 
 ## Ukázka použití
-```bash
 Press Enter to roll the dice...
 Dice: [3, 3, 1, 6, 2, 5]
 Score for this round: 50
