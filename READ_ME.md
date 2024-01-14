@@ -23,17 +23,6 @@ Uživatel je vyzván k zadání, zda chce hrát další kolo.
 ## Rozpoznávané Kombinace / Body
 Program rozpoznává následující kombinace a přiděluje jim odpovídající body:
 
-<<<<<<< HEAD
-3x jednička: 1000 bodů
-4x jednička: 2000 bodů
-5x jednička: 4000 bodů
-6x jednička: 8000 bodů
-3x dvojice: 1000 bodů
-Postupka (1, 2, 3, 4, 5, 6): 1500 bodů
-A další...
-### Ukázka použití
-
-=======
 |           | Hodnota           |   Počet bodů   |           |
 |:---------:|:-----------------:|:--------------:|:---------:|
 |           |             1     |    100 bodů    |           |
@@ -63,7 +52,7 @@ print("Total score: {}\n".format(total_score))
 
 
 ## Ukázka použití
->>>>>>> ed68fb65c7a310119163a296836a5e7bfc3ca722
+```
 Press Enter to roll the dice...
 Dice: [3, 3, 1, 6, 2, 5]
 Score for this round: 50
@@ -77,7 +66,4 @@ Total score: 650
 
 Do you want to play another round? (yes/no): no
 Game over! Final score: 650
-<<<<<<< HEAD
-=======
 ```
->>>>>>> ed68fb65c7a310119163a296836a5e7bfc3ca722
