@@ -31,14 +31,13 @@ Program rozpoznává následující speciální kombinace a přiděluje jim odpo
 Postupka (1, 2, 3, 4, 5, 6): 1500 bodů
 | Kombinace    | Počet bodů 
 |:---------:|:---------:|
-|3x jednička| Novák     |
-|4x jednička| Smetana   |
-|4x jednička| Vondráček |
-|5x jednička| Vondráček |
-|6x jednička| Vondráček |
-|3x dvojice| Vondráček |
-|Postupka (1, 2, 3, 4, 5, 6)| Vondráček |
-|4x jednička| Vondráček |
+|3x jednička|1000 bodů|
+|4x jednička|2000 bodů|
+|5x jednička|4000 bodů|
+|6x jednička|8000 bodů|
+|3x dvojice|1000 bodů|
+|Postupka (1, 2, 3, 4, 5, 6)|1500 bodů|
+
 
 A další...
 ## Ukázka použití
