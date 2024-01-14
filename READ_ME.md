@@ -6,11 +6,11 @@ Jednoduchý program v Pythonu, který simuluje hru s kostkami a vypočítává s
 
 ### Požadavky
 
-Program vyžaduje nainstalovaný Python (verze 3.x).
+Program vyžaduje nainstalovaný Python.
 
 ### Spuštění
 
-Stačí spustit skript v Pythonu. Příkaz k spuštění může být:
+Stačí spustit funkci v Pythonu. Příkaz k spuštění:
 ```bash
  main_fce()
 ```
