@@ -46,7 +46,7 @@ Program rozpoznává následující kombinace a přiděluje jim odpovídající 
         # přidá skóre do celkového skóre
         total_score += round_score
         print("Total score: {}\n".format(total_score))
-        ´´´ 
+´´´ 
 
 ## Ukázka použití
 ```bash
