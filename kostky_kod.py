@@ -8,10 +8,13 @@ def main_fce():
         score = 0
 
         # Hledá všechny speciální kombinace
-        if all(x == 1 for x in dice):
+        if dice == [1, 2, 3, 4, 5, 6]:
+            return score == 1500
+
+        elif all(x == 1 for x in dice):
             score += 2 ** (len(dice) - 1) * 1000
 
-        if all(x == dice[0] for x in dice):
+        elif all(x == dice[0] for x in dice):
             if dice[0] == 1:
                 score += 2 ** (len(dice) - 1) * 1000
             else:
@@ -20,8 +23,6 @@ def main_fce():
         elif len(set(dice)) == 3 and all(dice.count(x) == 2 for x in set(dice)):
             score += 1000
 
-        elif dice == [1, 2, 3, 4, 5, 6]:
-            score += 1500
 
         else:
             # Hledá samotné 1 a 5
@@ -34,14 +35,6 @@ def main_fce():
                     score += count * 50 if count < 3 else (count - 2) * 500
                 elif count in [3, 4, 5, 6]:
                     score += value * (2 ** (count - 3) * 100)
-
-            # Hledá speciální případy
-            if all(x in [2, 3, 4, 5, 6] for x in dice):
-                score += 1500
-
-            for count in range(3, 7):
-                if dice.count(1) == count:
-                    score += 2 ** (count - 3) * 1000
 
         return score
 
