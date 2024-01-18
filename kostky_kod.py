@@ -6,74 +6,68 @@ def main_fce():
 
     def calculate_score(dice):
         score = 0
-        
-        # hledá všechny speciální kombinace
+
+        # Hledá všechny speciální kombinace
         if all(x == 1 for x in dice):
-            score += 1000 if len(dice) == 3 else 2000 if len(dice) == 4 else 4000 if len(dice) == 5 else 8000
+            score += 2 ** (len(dice) - 1) * 1000
+
         if all(x == dice[0] for x in dice):
             if dice[0] == 1:
-                score += 1000 if len(dice) == 3 else 2000 if len(dice) == 4 else 4000 if len(dice) == 5 else 8000
+                score += 2 ** (len(dice) - 1) * 1000
             else:
-                score += dice[0] * (100 if len(dice) == 3 else 200 if len(dice) == 4 else 400 if len(dice) == 5 else 800)
+                score += dice[0] * (2 ** (len(dice) - 1) * 100)
+
         elif len(set(dice)) == 3 and all(dice.count(x) == 2 for x in set(dice)):
             score += 1000
+
         elif dice == [1, 2, 3, 4, 5, 6]:
             score += 1500
+
         else:
-            # hledá samotné 1, a 5
+            # Hledá samotné 1 a 5
             for value in set(dice):
                 count = dice.count(value)
-                if value == 1:
-                    score += count * 100 if count < 3 else 1000 + (count - 3) * 100
-                elif value == 5:
-                    score += count * 50 if count < 3 else 500 + (count - 3) * 50
-                elif count == 3:
-                    score += value * 100
-                elif count == 4:
-                    score += value * 200  # Changed from 400 to 200
-                elif count == 5:
-                    score += value * 400
-                elif count == 6:
-                    score += value * 800
 
-            # hledá speciální případy
-            if all(x == 2 for x in dice) or all(x == 3 for x in dice) or all(x == 4 for x in dice) or all(x == 5 for x in dice) or all(x == 6 for x in dice):
+                if value == 1:
+                    score += count * 100 if count < 3 else (count - 2) * 1000
+                elif value == 5:
+                    score += count * 50 if count < 3 else (count - 2) * 500
+                elif count in [3, 4, 5, 6]:
+                    score += value * (2 ** (count - 3) * 100)
+
+            # Hledá speciální případy
+            if all(x in [2, 3, 4, 5, 6] for x in dice):
                 score += 1500
 
-            if dice.count(1) == 3:
-                score += 1000
-            elif dice.count(1) == 4:
-                score += 2000
-            elif dice.count(1) == 5:
-                score += 4000
-            elif dice.count(1) == 6:
-                score += 8000
+            for count in range(3, 7):
+                if dice.count(1) == count:
+                    score += 2 ** (count - 3) * 1000
 
         return score
 
     total_score = 0
 
     while True:
-        input("Press Enter to roll the dice...")
+        input("zmáčkněte Enter pro hod kostkou...")
 
         # hod 6 kostkami
         dice = roll_dice()
 
-        print("Dice: {}".format(dice))
+        print("Kosty: {}".format(dice))
 
         # vypočítávání skóre pro současný hod
         round_score = calculate_score(dice)
-        print("Score for this round: {}".format(round_score))
+        print("Skóre: {}".format(round_score))
 
         # přidá skóre do celkového skóre
         total_score += round_score
-        print("Total score: {}\n".format(total_score))
+        print("Celkové skóre: {}\n".format(total_score))
 
         # zeptá se uživatele jestli chce zpustit další
-        play_again = input("Do you want to play another round? (yes/no): ").lower()
-        if play_again != 'yes':
-            print("Game over! Final score: {}".format(total_score))
+        play_again = input("Chcete hrát další kolo? (ano/ne): ").lower()
+        if play_again != 'ano':
+            print("Konec hry! Celkové skóre: {}".format(total_score))
             break
 
-# Volání hlavní funkce
+# Vyvolávání celého kódu
 main_fce()
