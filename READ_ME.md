@@ -48,22 +48,28 @@ print("Score for this round: {}".format(round_score))
 # Přidání skóre do celkového skóre
 total_score += round_score
 print("Total score: {}\n".format(total_score))
+
+# zeptá se uživatele jestli chce zpustit další
+play_again = input("Chcete hrát další kolo? (ano/ne): ").lower()
+if play_again != 'ano':
+ print("Konec hry! Celkové skóre: {}".format(total_score))
+ break
 ```
 
 
 ## Ukázka použití
 ```
-Press Enter to roll the dice...
-Dice: [3, 3, 1, 6, 2, 5]
-Score for this round: 50
-Total score: 50
+zmáčkněte Enter pro hod kostkou...
+Kosty: [4, 5, 4, 1, 2, 6]
+Skóre: 150
+Celkové skóre: 150
 
-Do you want to play another round? (yes/no): yes
-Press Enter to roll the dice...
-Dice: [4, 1, 1, 4, 4, 2]
-Score for this round: 600
-Total score: 650
+Chcete hrát další kolo? (ano/ne): ano
+zmáčkněte Enter pro hod kostkou...
+Kosty: [5, 3, 1, 4, 5, 4]
+Skóre: 200
+Celkové skóre: 350
 
-Do you want to play another round? (yes/no): no
-Game over! Final score: 650
+Chcete hrát další kolo? (ano/ne): ne
+Konec hry! Celkové skóre: 350
 ```
