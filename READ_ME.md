@@ -16,10 +16,10 @@ Stačí spustit funkci v Pythonu. Příkaz k spuštění:
 ```
 python nazev_skriptu.py
 ## Pravidla hry
-Po stisknutí klávesy Enter jsou hodeny šest kostek.
-Program automaticky rozpoznává speciální kombinace a přiděluje jim odpovídající body.
-Skóre za každé kolo je zobrazeno a přidáno k celkovému skóre.
-Uživatel je vyzván k zadání, zda chce hrát další kolo.
+1. Po vybrání herního módu jsou buď vygenerovány hodnoty, nebo zadány ručně
+2. Program automaticky rozpoznává speciální kombinace a přiděluje jim odpovídající body.
+3. Skóre za každé kolo je zobrazeno a přidáno k celkovému skóre.
+4. Uživatel je vyzván k zadání, zda chce hrát další kolo.
 ## Rozpoznávané Kombinace / Body
 Program rozpoznává následující kombinace a přiděluje jim odpovídající body:
 
