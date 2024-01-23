@@ -38,7 +38,7 @@ Program rozpoznává následující kombinace a přiděluje jim odpovídající 
 |           |       3x dvojice    |   1000 bodů    |           |
 |           |Postupka (1, 2, 3, 4, 5, 6)|   1500 bodů    |           |
 
-### samotné přiřazení počtu bodů:
+### samotné vypočítání počtu bodů pro každý hod:
 ```
  def calculate_score(dice): 
 ```
