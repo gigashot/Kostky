@@ -9,26 +9,34 @@ def main_fce():
         return dice
 
     def calculate_score(dice): 
-        # Hledá všechny kombinace
+    # Hledá všechny kombinace
         score = 0
-        
+
         if dice == [1, 2, 3, 4, 5, 6]:
             score += 1500
 
         elif all(x == 1 for x in dice):
             if dice.count(1) == 5:
                 score += 4000
+            elif dice.count(1) == 6:
+                score += 8000
             else:
                 score += 2 ** (len(dice) - 1) * 1000
 
         elif all(x == dice[0] for x in dice):
             if dice[0] == 1:
                 score += 2 ** (len(dice) - 1) * 1000
+            elif dice.count(dice[0]) == 6:
+                score += dice[0] * 800
             else:
                 score += dice[0] * (2 ** (len(dice) - 1) * 100)
 
         elif len(set(dice)) == 3 and all(dice.count(x) == 2 for x in set(dice)):
             score += 1000
+
+        elif any(dice.count(value) == 5 for value in set(dice)):
+            value = [value for value in set(dice) if dice.count(value) == 5][0]
+            score += value * 400
 
         else:
             # Hledá samotné 1 a 5
@@ -44,10 +52,11 @@ def main_fce():
 
         return score
 
+
     total_score = 0
 
     while True:
-        manual_input = input("Chcete generovat hod kostkou, nebo házet vlastními kostakmi (vlastní/generuj): ").lower()
+        manual_input = input("Chcete generovat hod kostkou, nebo házet vlastními kostakmi (generuj/vlastní): ").lower()
         if manual_input == "vlastní":
             dice = roll_dice(manual_input=True)
         else:
@@ -72,4 +81,3 @@ def main_fce():
 
 # Vyvolávání celého kódu
 main_fce()
-
