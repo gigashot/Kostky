@@ -47,7 +47,7 @@ def main_fce():
     total_score = 0
 
     while True:
-        manual_input = input("Chcete generovat hod kostkou, nebo házet vlastními kostakmi (generuj/vlastní): ").lower()
+        manual_input = input("Chcete generovat hod kostkou, nebo házet vlastními kostakmi (vlastní/generuj): ").lower()
         if manual_input == "vlastní":
             dice = roll_dice(manual_input=True)
         else:
