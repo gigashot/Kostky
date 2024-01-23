@@ -59,17 +59,23 @@ if play_again != 'ano':
 
 ## Ukázka použití
 ```
-zmáčkněte Enter pro hod kostkou...
-Kosty: [4, 5, 4, 1, 2, 6]
-Skóre: 150
-Celkové skóre: 150
+Chcete generovat hod kostkou, nebo házet vlastními kostakmi (generuj/vlastní): generuj
+Zmáčkněte Enter pro hod kostkou...
+Kosty: [4, 1, 6, 1, 2, 3]
+Skóre: 200
+Celkové skóre: 200
 
 Chcete hrát další kolo? (ano/ne): ano
-zmáčkněte Enter pro hod kostkou...
-Kosty: [5, 3, 1, 4, 5, 4]
-Skóre: 200
-Celkové skóre: 350
+Zadejte hodnotu pro kostku 1: 1
+Zadejte hodnotu pro kostku 2: 1
+Zadejte hodnotu pro kostku 3: 1
+Zadejte hodnotu pro kostku 4: 1
+Zadejte hodnotu pro kostku 5: 1
+Zadejte hodnotu pro kostku 6: 1
+Kosty: [1, 1, 1, 1, 1, 1]
+Skóre: 8000
+Celkové skóre: 8200
 
 Chcete hrát další kolo? (ano/ne): ne
-Konec hry! Celkové skóre: 350
+Konec hry! Celkové skóre: 8200
 ```
