@@ -38,7 +38,10 @@ Program rozpoznává následující kombinace a přiděluje jim odpovídající 
 |           |       3x dvojice    |   1000 bodů    |           |
 |           |Postupka (1, 2, 3, 4, 5, 6)|   1500 bodů    |           |
 
-
+###samotné rozpoznávání skóre je v této funkci:
+```
+ def calculate_score(dice): 
+```
 
 ```python
 #Výpočet skóre pro současný hod
