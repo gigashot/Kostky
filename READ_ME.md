@@ -14,7 +14,6 @@ Stačí spustit funkci v Pythonu. Příkaz k spuštění:
 ```bash
  main_fce()
 ```
-python nazev_skriptu.py
 ## Postup hry
 1. Po vybrání herního módu jsou buď vygenerovány hodnoty, nebo zadány ručně
 2. Program automaticky rozpoznává speciální kombinace a přiděluje jim odpovídající body.
